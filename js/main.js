@@ -10,9 +10,17 @@
   if ('scrollRestoration' in history) {
     history.scrollRestoration = 'manual';
   }
-  // Pin to top immediately and again on full load — prevents hash-based auto-scroll
+  // Pin to top once at script start — but never fight the user after that
   window.scrollTo(0, 0);
-  window.addEventListener('load', () => window.scrollTo(0, 0), { once: true });
+
+  // Track whether the user has already started scrolling/interacting.
+  // If they have, we must NOT yank them back to the top when the loader finishes.
+  let userScrolled = false;
+  const markScrolled = () => { userScrolled = true; };
+  const scrollKeys = new Set(['ArrowUp','ArrowDown','PageUp','PageDown','Home','End',' ','Spacebar']);
+  window.addEventListener('wheel',     markScrolled, { passive: true });
+  window.addEventListener('touchmove', markScrolled, { passive: true });
+  window.addEventListener('keydown', (e) => { if (scrollKeys.has(e.key)) markScrolled(); }, { passive: true });
 
   /* ---------- Mobile vh fix ---------- */
   const setVh = () => {
@@ -60,16 +68,21 @@
     loader.classList.add('is-out');
     document.body.classList.remove('no-scroll');
 
-    // Pin to top so the browser cannot auto-scroll to a hash or remembered position
-    window.scrollTo(0, 0);
+    // Only pin to top if the user hasn't started scrolling and there's no hash
+    // to honour. Otherwise we'd yank them back against their will.
+    if (!userScrolled && !pendingHash) {
+      window.scrollTo(0, 0);
+    }
 
     setTimeout(() => loader?.remove(), 900);
     document.querySelector('.hero')?.classList.add('is-in');
     initOnLoad();
 
-    // If the URL had a hash, smooth-scroll to it ourselves after a beat
-    if (pendingHash && pendingHash.length > 1) {
+    // If the URL had a hash AND the user hasn't already scrolled away,
+    // smooth-scroll to it ourselves after a beat.
+    if (pendingHash && pendingHash.length > 1 && !userScrolled) {
       setTimeout(() => {
+        if (userScrolled) return;
         const tgt = document.querySelector(pendingHash);
         if (!tgt) return;
         const top = tgt.getBoundingClientRect().top + window.scrollY - 60;
