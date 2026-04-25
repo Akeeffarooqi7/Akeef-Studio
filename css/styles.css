@@ -1924,6 +1924,21 @@ section {
   flex-direction: column;
 }
 
+/* Hard-pin window heights so the inner viewport / terminal can flex to
+   fill, but the outer box never grows as typing-animation lines stream in. */
+.window--browser,
+.window--terminal {
+  height: 432px;
+}
+
+@media (max-width: 600px) {
+
+  .window--browser,
+  .window--terminal {
+    height: 352px;
+  }
+}
+
 .window__chrome {
   display: flex;
   align-items: center;
