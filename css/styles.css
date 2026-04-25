@@ -2224,8 +2224,12 @@ section {
 
 /* Terminal — light mode */
 .terminal {
-  flex: 1 1 auto;
+  /* Lock the terminal to a fixed basis. flex items default to
+     min-height:auto which would let typed content grow the box and
+     push the page taller — flex:0 0 380px + min-height:0 prevents that. */
+  flex: 0 0 380px;
   height: 380px;
+  min-height: 0;
   max-height: 380px;
   padding: 20px 22px;
   font-family: var(--mono);
@@ -2248,6 +2252,7 @@ section {
 
 @media (max-width: 600px) {
   .terminal {
+    flex: 0 0 300px;
     height: 300px;
     max-height: 300px;
     font-size: 11.5px;
