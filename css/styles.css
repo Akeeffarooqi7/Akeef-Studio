@@ -3775,6 +3775,90 @@ section {
 }
 
 /* =========================================================
+   STABILITY + PERF FIXES
+   - Pause off-screen animations
+   - Mobile backdrop-filter trim (prevents stutter)
+   - overscroll-behavior on horizontal sliders
+   - Paint isolation on heavy sections
+   ========================================================= */
+
+/* Pause heavy animations when their section scrolls out of viewport */
+.marquee.is-paused .marquee__track,
+.motion__stage.is-paused .build *,
+.motion__stage.is-paused .build__scan,
+.hero__bg.is-paused * {
+  animation-play-state: paused !important;
+}
+
+/* Skills slider — kill horizontal-edge bounce so it doesn't propagate to the page */
+.skills__grid {
+  overscroll-behavior-x: contain;
+  overscroll-behavior-y: auto;
+  overflow-anchor: none;
+}
+
+/* Browser-level: prevent scroll-anchor jumps when dynamic content loads */
+html, body {
+  overflow-anchor: none;
+}
+
+/* Smooth iOS touch momentum */
+html { -webkit-overflow-scrolling: touch; }
+
+/* Paint isolation — limits compositor work for heavy sections */
+.work,
+.services,
+.process,
+.motion,
+.skills,
+.about {
+  contain: layout style;
+}
+.card,
+.svc,
+.pillar,
+.skillgroup,
+.tstep__media,
+.window {
+  contain: layout style paint;
+}
+
+/* === Mobile-only: lighter glass for stutter-free scrolling === */
+@media (max-width: 900px) {
+  .card,
+  .svc,
+  .pillar,
+  .contact__form,
+  .skillgroup,
+  .motion__steps,
+  .hero__eyebrow {
+    -webkit-backdrop-filter: blur(10px) saturate(140%);
+            backdrop-filter: blur(10px) saturate(140%);
+  }
+  /* The macOS-style window mocks have heavy content + animations.
+     Drop the blur entirely and use a solid translucent surface instead. */
+  .window {
+    -webkit-backdrop-filter: none;
+            backdrop-filter: none;
+    background: var(--surface);
+  }
+  /* Marquee mask softer for stability on Android browsers */
+  .marquee {
+    -webkit-mask-image: linear-gradient(90deg, transparent 0%, #000 4%, #000 96%, transparent 100%);
+            mask-image: linear-gradient(90deg, transparent 0%, #000 4%, #000 96%, transparent 100%);
+  }
+  /* Hero orbs: drop will-change so the browser doesn't reserve a layer for parallax */
+  .hero__orb { will-change: auto; }
+}
+
+/* iOS-specific: smooth momentum on horizontal sliders */
+@supports (-webkit-touch-callout: none) {
+  .skills__grid {
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
+/* =========================================================
    Reduced motion
    ========================================================= */
 @media (prefers-reduced-motion: reduce) {

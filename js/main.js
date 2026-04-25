@@ -6,6 +6,14 @@
 (() => {
   'use strict';
 
+  /* ---------- Disable browser scroll restoration (kills auto-scroll on reload) ---------- */
+  if ('scrollRestoration' in history) {
+    history.scrollRestoration = 'manual';
+  }
+  // Pin to top immediately and again on full load — prevents hash-based auto-scroll
+  window.scrollTo(0, 0);
+  window.addEventListener('load', () => window.scrollTo(0, 0), { once: true });
+
   /* ---------- Mobile vh fix ---------- */
   const setVh = () => {
     document.documentElement.style.setProperty('--vh', `${window.innerHeight * 0.01}px`);
@@ -16,6 +24,9 @@
 
   const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   const isTouch = window.matchMedia('(hover: none)').matches;
+
+  // Capture initial hash so we can navigate to it AFTER loader exits, in a controlled way
+  const pendingHash = window.location.hash;
 
   /* =========================================================
      Loader
@@ -45,11 +56,26 @@
   const finishLoader = () => {
     if (!loader || booted) return;
     booted = true;
+
     loader.classList.add('is-out');
     document.body.classList.remove('no-scroll');
+
+    // Pin to top so the browser cannot auto-scroll to a hash or remembered position
+    window.scrollTo(0, 0);
+
     setTimeout(() => loader?.remove(), 900);
     document.querySelector('.hero')?.classList.add('is-in');
     initOnLoad();
+
+    // If the URL had a hash, smooth-scroll to it ourselves after a beat
+    if (pendingHash && pendingHash.length > 1) {
+      setTimeout(() => {
+        const tgt = document.querySelector(pendingHash);
+        if (!tgt) return;
+        const top = tgt.getBoundingClientRect().top + window.scrollY - 60;
+        window.scrollTo({ top, behavior: prefersReduced ? 'auto' : 'smooth' });
+      }, 950);
+    }
   };
 
   window.addEventListener('load', startLoader);
@@ -183,7 +209,7 @@
   };
 
   /* =========================================================
-     Hero rotator (cycling words)
+     Hero rotator (cycling words) — pauses when tab hidden
      ========================================================= */
   const initRotator = () => {
     const rot = document.querySelector('[data-rotator]');
@@ -191,6 +217,7 @@
     const words = Array.from(rot.children);
     if (!words.length) return;
     let i = 0;
+    let intervalId = null;
     rot.style.position = 'relative';
     rot.style.display = 'inline-block';
     rot.style.width = '100%';
@@ -203,7 +230,7 @@
       w.style.opacity = idx === 0 ? '1' : '0';
     });
 
-    setInterval(() => {
+    const tick = () => {
       const cur = words[i];
       const next = words[(i + 1) % words.length];
       cur.style.transform = 'translate3d(0,-110%,0)';
@@ -211,7 +238,22 @@
       next.style.transform = 'translate3d(0,0,0)';
       next.style.opacity = '1';
       i = (i + 1) % words.length;
-    }, 2400);
+    };
+
+    const start = () => {
+      if (intervalId) return;
+      intervalId = setInterval(tick, 2400);
+    };
+    const stop = () => {
+      if (!intervalId) return;
+      clearInterval(intervalId);
+      intervalId = null;
+    };
+
+    start();
+    document.addEventListener('visibilitychange', () => {
+      if (document.hidden) stop(); else start();
+    });
   };
 
   /* =========================================================
@@ -398,6 +440,21 @@
     };
     tick();
     setInterval(tick, 30 * 1000);
+  };
+
+  /* =========================================================
+     Pause off-screen animations (marquee, build mock)
+     ========================================================= */
+  const initAnimationPauser = () => {
+    if (!('IntersectionObserver' in window)) return;
+    const targets = document.querySelectorAll('.marquee, .motion__stage, .hero__bg');
+    if (!targets.length) return;
+    const obs = new IntersectionObserver((entries) => {
+      entries.forEach((en) => {
+        en.target.classList.toggle('is-paused', !en.isIntersecting);
+      });
+    }, { threshold: 0, rootMargin: '50px' });
+    targets.forEach((t) => obs.observe(t));
   };
 
   /* =========================================================
@@ -638,6 +695,7 @@
     initFooterTime();
     initMotion();
     initSkillsSlider();
+    initAnimationPauser();
     initGSAP();
   };
 
