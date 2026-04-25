@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="bg5" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#F4EBDC"/>
+      <stop offset="100%" stop-color="#DCE3D9"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#bg5)"/>
+  <text x="40" y="44" font-family="ui-monospace, monospace" font-size="11" letter-spacing="3" fill="#A87648">PHASE 05 · DOMAIN &amp; DEPLOYMENT</text>
+
+  <!-- Globe with longitude/latitude -->
+  <g transform="translate(220 280)">
+    <circle r="160" fill="#FFFFFF" stroke="#1A1815" stroke-width="1.4"/>
+    <!-- Longitude lines (vertical) -->
+    <g fill="none" stroke="#1A1815" stroke-width="0.8" opacity="0.35">
+      <ellipse cx="0" cy="0" rx="160" ry="160"/>
+      <ellipse cx="0" cy="0" rx="120" ry="160"/>
+      <ellipse cx="0" cy="0" rx="80" ry="160"/>
+      <ellipse cx="0" cy="0" rx="40" ry="160"/>
+      <ellipse cx="0" cy="0" rx="160" ry="120"/>
+      <ellipse cx="0" cy="0" rx="160" ry="80"/>
+      <ellipse cx="0" cy="0" rx="160" ry="40"/>
+    </g>
+    <line x1="-160" y1="0" x2="160" y2="0" stroke="#A87648" stroke-width="1.5"/>
+    <!-- Marker dots -->
+    <circle cx="-80" cy="-50" r="5" fill="#A87648"/>
+    <circle cx="40" cy="-90" r="5" fill="#A87648"/>
+    <circle cx="100" cy="20" r="5" fill="#A87648"/>
+    <circle cx="-30" cy="80" r="5" fill="#A87648"/>
+    <circle cx="80" cy="100" r="5" fill="#A87648"/>
+  </g>
+
+  <!-- Cloud + connection lines on right -->
+  <g transform="translate(560 200)">
+    <!-- Cloud icon -->
+    <g fill="#FFFFFF" stroke="#1A1815" stroke-width="1.4">
+      <path d="M-50,30 a30,30 0 0,1 30,-30 a35,35 0 0,1 65,-5 a26,26 0 0,1 25,40 z"/>
+    </g>
+    <text x="20" y="32" text-anchor="middle" font-family="ui-monospace, monospace" font-size="10" fill="#1A1815" letter-spacing="2">CLOUD</text>
+  </g>
+
+  <!-- Lock icon (SSL) -->
+  <g transform="translate(580 360)">
+    <rect x="0" y="20" width="60" height="50" rx="6" fill="#3F5246"/>
+    <path d="M14,20 L14,12 a16,16 0 0,1 32,0 L46,20" fill="none" stroke="#3F5246" stroke-width="3"/>
+    <circle cx="30" cy="40" r="4" fill="#F4EBDC"/>
+    <rect x="28" y="40" width="4" height="14" fill="#F4EBDC"/>
+    <text x="80" y="48" font-family="ui-monospace, monospace" font-size="11" fill="#1A1815" letter-spacing="2">SSL</text>
+    <text x="80" y="62" font-family="ui-monospace, monospace" font-size="9" fill="#6E665B" letter-spacing="2">HTTPS · A+</text>
+  </g>
+
+  <!-- Connection lines from globe to cloud and lock -->
+  <g stroke="#A87648" stroke-width="1.2" stroke-dasharray="4 4" fill="none">
+    <path d="M 380 230 Q 460 180 540 220"/>
+    <path d="M 380 320 Q 480 360 560 380"/>
+  </g>
+
+  <!-- Domain plate -->
+  <g transform="translate(80 480)">
+    <rect x="0" y="0" width="320" height="46" rx="8" fill="#FFFFFF" stroke="#1A1815" stroke-width="1.4"/>
+    <text x="20" y="29" font-family="ui-monospace, monospace" font-size="14" fill="#1A1815">https://</text>
+    <text x="100" y="29" font-family="ui-monospace, monospace" font-size="14" fill="#A87648" font-weight="500">akeef.studio</text>
+    <circle cx="296" cy="23" r="6" fill="#3F8C5F"/>
+  </g>
+
+  <text x="40" y="555" font-family="ui-monospace, monospace" font-size="10" letter-spacing="2" fill="#6E665B">DOMAIN · DNS · SSL · ANALYTICS · LIVE</text>
+</svg>

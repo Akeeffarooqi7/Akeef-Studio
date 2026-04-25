@@ -1,0 +1,1094 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#000000" />
+  <title>Akeef Farooqi — Studio of Code, Craft & Intelligence</title>
+  <meta name="description"
+    content="Akeef Farooqi · Studio — Premium websites, AI products and automations. We design and build refined digital experiences for founders, ateliers and ambitious brands." />
+  <meta name="author" content="Akeef Farooqi" />
+  <meta name="keywords"
+    content="Akeef Farooqi, premium portfolio, web developer, AI builder, automations, Flask developer, luxury web design, India" />
+  <link rel="canonical" href="https://akeef.studio/" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Akeef Farooqi — Studio of Code, Craft & Intelligence" />
+  <meta property="og:description"
+    content="Premium websites, AI products and automations — designed and engineered with intent." />
+  <meta property="og:image" content="assets/og-cover.svg" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- Favicon (inline SVG) -->
+  <link rel="icon" type="image/svg+xml"
+    href="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='14' fill='%230A0908'/><text x='50%25' y='54%25' text-anchor='middle' font-family='serif' font-size='34' fill='%23C9A961' font-weight='600'>AF</text></svg>" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT@9..144,300..900,30..100&family=EB+Garamond:ital,wght@1,400;1,500&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+    rel="stylesheet" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/styles.css" />
+
+  <!-- Libraries -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+  <script src="js/main.js" defer></script>
+
+  <!-- Structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Akeef Farooqi",
+    "jobTitle": "Developer · AI Builder · Web Architect",
+    "url": "https://akeef.studio/",
+    "sameAs": [
+      "https://www.linkedin.com/in/akeeffarooqi7/",
+      "https://github.com/Akeeffarooqi7/",
+      "https://www.instagram.com/akeef_farooqi7/"
+    ],
+    "email": "akeef.farooqi@gmail.com"
+  }
+  </script>
+</head>
+
+<body class="no-scroll" data-theme="ink">
+
+  <!-- Grain overlay -->
+  <div class="grain" aria-hidden="true"></div>
+
+  <!-- Custom cursor -->
+  <div class="cursor" aria-hidden="true">
+    <div class="cursor__dot"></div>
+    <div class="cursor__ring"></div>
+  </div>
+
+  <!-- Loader ° -->
+  <div class="loader" id="loader" aria-hidden="true">
+    <div class="loader__inner">
+      <div class="loader__mark">
+        <span class="loader__af">Akeef · Studio</span><span class="loader__deg"></span>
+      </div>
+      <div class="loader__bar"><span></span></div>
+      <div class="loader__meta">
+        <span class="loader__label">Code</span>
+        <span class="loader__count" id="loaderCount">00</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Navigation -->
+  <header class="nav" id="nav">
+    <a href="#home" class="nav__brand" aria-label="Akeef · Studio — Home">
+      <span class="brand__mark">AF<span class="brand__deg">°</span></span>
+      <span class="brand__word">Akeef <span class="brand__sep">·</span> Studio</span>
+    </a>
+
+    <nav class="nav__links" aria-label="Primary">
+      <a href="#work" data-link>Work</a>
+      <a href="#about" data-link>About</a>
+      <a href="#process" data-link>Process</a>
+      <a href="#services" data-link>Services</a>
+      <a href="#connect" data-link>Let's build</a>
+      <a href="#contact" data-link>Contact</a>
+    </nav>
+
+    <a href="#contact" class="nav__cta btn btn--ghost" data-magnetic>
+      <span>Start a project</span>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4">
+        <path d="M5 12h14M13 5l7 7-7 7" />
+      </svg>
+    </a>
+
+    <button class="nav__toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span>
+    </button>
+  </header>
+
+  <!-- Mobile menu -->
+  <div class="menu" id="menu" aria-hidden="true">
+    <div class="menu__inner">
+      <nav class="menu__links" aria-label="Mobile">
+        <a href="#work" data-link><i></i><span>Work</span></a>
+        <a href="#about" data-link><i></i><span>About</span></a>
+        <a href="#process" data-link><i></i><span>Process</span></a>
+        <a href="#services" data-link><i></i><span>Services</span></a>
+        <a href="#connect" data-link><i></i><span>Let's build</span></a>
+        <a href="#contact" data-link><i></i><span>Contact</span></a>
+      </nav>
+    </div>
+  </div>
+
+  <main id="main">
+
+    <!-- HERO -->
+    <section class="hero" id="home">
+      <div class="hero__bg" aria-hidden="true">
+        <div class="hero__orb hero__orb--a"></div>
+        <div class="hero__orb hero__orb--b"></div>
+      </div>
+
+      <div class="hero__inner">
+        <div class="hero__eyebrow">
+          <span class="dot"></span>
+          <span>Akeef · Studio — Available for select projects · 2026</span>
+        </div>
+
+        <h1 class="hero__title">
+          <span class="line"><span>Studio of</span></span>
+          <span class="line"><span><em>code,</em> craft</span></span>
+          <span class="line"><span><span class="amp">&amp;</span> intelligence.</span></span>
+        </h1>
+
+        <div class="hero__rotator" aria-label="Disciplines">
+          <span class="hero__rotator-prefix">I build</span>
+          <span class="rotator" data-rotator>
+            <span>premium websites.</span>
+            <span>AI-driven products.</span>
+            <span>web architectures.</span>
+            <span>elegant automations.</span>
+            <span>refined interfaces.</span>
+          </span>
+        </div>
+
+        <p class="hero__lede">
+          I'm <strong>Akeef Farooqi</strong> — a developer and AI builder shaping considered digital
+          experiences for founders, ateliers and ambitious brands. Quiet, precise, art-directed.
+        </p>
+
+        <div class="hero__ctas">
+          <a href="#work" class="btn btn--solid" data-magnetic>
+            <span>View projects</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4">
+              <path d="M5 12h14M13 5l7 7-7 7" />
+            </svg>
+          </a>
+          <a href="#contact" class="btn btn--outline" data-magnetic>
+            <span>Contact</span>
+          </a>
+        </div>
+
+        <div class="hero__meta">
+          <div><span class="num">04+</span><small>Premium builds shipped</small></div>
+          <div><span class="num">100%</span><small>In-house design &amp; code</small></div>
+          <div><span class="num">∞</span><small>Iterations until refined</small></div>
+        </div>
+      </div>
+
+      <a href="#work" class="hero__scroll" aria-label="Scroll to work">
+        <span>Scroll</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4">
+          <path d="M12 5v14M5 12l7 7 7-7" />
+        </svg>
+      </a>
+    </section>
+
+    <!-- MARQUEE -->
+    <section class="marquee" aria-hidden="true">
+      <div class="marquee__track">
+        <span>Web Architecture</span><span>·</span>
+        <span>AI Products</span><span>·</span>
+        <span>Brand-Grade UI</span><span>·</span>
+        <span>Automations</span><span>·</span>
+        <span>Flask &amp; Python</span><span>·</span>
+        <span>Frontend Engineering</span><span>·</span>
+        <span>Design Systems</span><span>·</span>
+        <span>Web Architecture</span><span>·</span>
+        <span>AI Products</span><span>·</span>
+        <span>Brand-Grade UI</span><span>·</span>
+        <span>Automations</span><span>·</span>
+        <span>Flask &amp; Python</span><span>·</span>
+        <span>Frontend Engineering</span><span>·</span>
+        <span>Design Systems</span><span>·</span>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="about" id="about">
+      <div class="section__head">
+        <span class="section__index">/ 01</span>
+        <span class="section__label">About</span>
+      </div>
+
+      <div class="about__grid">
+        <div class="about__col about__col--head">
+          <h2 class="h-display reveal-lines">
+            A studio of one — engineered like a studio of ten.
+          </h2>
+          <div class="about__portrait" data-reveal>
+            <img loading="lazy"
+              src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=900&amp;q=70&amp;auto=format&amp;fit=crop"
+              alt="The studio at work — focused, considered, hand-crafted." />
+            <div class="about__caption">
+              <span>The Studio · 2026</span>
+              <span>India · Worldwide</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="about__col about__col--body">
+          <p class="lede reveal-lines">
+            I design, develop and deploy refined digital products end-to-end. From the first line of
+            type to the last byte shipped to production, every detail is considered — and nothing
+            is delegated to chance.
+          </p>
+
+          <div class="about__pillars">
+            <article class="pillar" data-reveal>
+              <span class="pillar__num">01</span>
+              <div>
+                <h3>Web Development</h3>
+                <p>Frontend and backend systems built with Flask, Python, and modern JavaScript — fast, accessible, and
+                  beautifully crafted.</p>
+              </div>
+            </article>
+            <article class="pillar" data-reveal>
+              <span class="pillar__num">02</span>
+              <div>
+                <h3>App <span class="amp">&amp;</span> Product</h3>
+                <p>Full product builds with auth, dashboards, and integrations — engineered to scale from MVP to
+                  thousands of users.</p>
+              </div>
+            </article>
+            <article class="pillar" data-reveal>
+              <span class="pillar__num">03</span>
+              <div>
+                <h3>AI <span class="amp">&amp;</span> Automation</h3>
+                <p>AI-powered features, chatbots, and workflows that save hours every week — quietly working in the
+                  background.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROCESS / HOW WE WORK -->
+    <section class="process" id="process">
+      <div class="section__head">
+        <span class="section__index">/ 02</span>
+        <span class="section__label">How we work</span>
+      </div>
+
+      <div class="process__intro">
+        <h2 class="h-display reveal-lines">
+          A deliberate process — from <em>brief</em> to <em>launch</em>.
+        </h2>
+        <p class="lede reveal-lines">
+          Every project moves through six considered chapters. No surprises, no rushed handoffs —
+          only an engineered path from your idea to a live, premium product.
+        </p>
+      </div>
+
+      <div class="process__timeline">
+
+        <article class="tstep" data-reveal>
+          <div class="tstep__media">
+            <img loading="lazy" src="assets/phase-01-discovery.svg"
+              alt="Discovery & Brief — notebook with goals checklist." />
+            <span class="tstep__tag">Discovery</span>
+          </div>
+          <div class="tstep__nub">01</div>
+          <div class="tstep__content">
+            <span class="tstep__phase">Discovery</span>
+            <h3>Discovery <span class="amp">&amp;</span> Brief</h3>
+            <p>We start with a quiet conversation. Your goals, your audience, your competitors and the soul of your
+              brand. You leave with a one-page brief — and I leave with a map.</p>
+            <ul class="tstep__list">
+              <li>Client request and goals</li>
+              <li>Audience and positioning</li>
+              <li>Scope and success metrics</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="tstep tstep--right" data-reveal>
+          <div class="tstep__content">
+            <span class="tstep__phase">Strategy</span>
+            <h3>Strategy <span class="amp">&amp;</span> Architecture</h3>
+            <p>Sitemap, page count, user flows and a content skeleton. Decisions on tech stack, hosting and integrations
+              are made <em>before</em> a single pixel is moved.</p>
+            <ul class="tstep__list">
+              <li>Sitemap and pages (3 / 5 / 8+)</li>
+              <li>Tech stack selection</li>
+              <li>Wireframes and flows</li>
+            </ul>
+          </div>
+          <div class="tstep__nub">02</div>
+          <div class="tstep__media">
+            <img loading="lazy" src="assets/phase-02-strategy.svg"
+              alt="Strategy & Architecture — sitemap with pages and user flows." />
+            <span class="tstep__tag">Strategy</span>
+          </div>
+        </article>
+
+        <article class="tstep" data-reveal>
+          <div class="tstep__media">
+            <img loading="lazy" src="assets/phase-03-design.svg"
+              alt="Design — type scale, color palette, components." />
+            <span class="tstep__tag">Design</span>
+          </div>
+          <div class="tstep__nub">03</div>
+          <div class="tstep__content">
+            <span class="tstep__phase">Design</span>
+            <h3>Design — UI / UX</h3>
+            <p>Art-directed design that feels like a brand, not a template. Typography, motion, color and spacing —
+              refined until quiet luxury appears in every section.</p>
+            <ul class="tstep__list">
+              <li>Brand palette and type system</li>
+              <li>Hi-fi UI for every page</li>
+              <li>Interaction and motion design</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="tstep tstep--right" data-reveal>
+          <div class="tstep__content">
+            <span class="tstep__phase">Development</span>
+            <h3>Development</h3>
+            <p>Hand-coded HTML, CSS, JavaScript — with Flask or Python on the backend when needed. Clean, semantic,
+              fast, and built to pass Lighthouse with grace.</p>
+            <ul class="tstep__list">
+              <li>Frontend and CMS / backend</li>
+              <li>Animations and micro-interactions</li>
+              <li>Performance and SEO baked in</li>
+            </ul>
+          </div>
+          <div class="tstep__nub">04</div>
+          <div class="tstep__media">
+            <img loading="lazy" src="assets/phase-04-development.svg"
+              alt="Development — hand-coded HTML in the editor." />
+            <span class="tstep__tag">Development</span>
+          </div>
+        </article>
+
+        <article class="tstep" data-reveal>
+          <div class="tstep__media">
+            <img loading="lazy" src="assets/phase-05-deployment.svg"
+              alt="Domain & Deployment — globe, cloud, SSL, live URL." />
+            <span class="tstep__tag">Deployment</span>
+          </div>
+          <div class="tstep__nub">05</div>
+          <div class="tstep__content">
+            <span class="tstep__phase">Domain &amp; deploy</span>
+            <h3>Domain <span class="amp">&amp;</span> Deployment</h3>
+            <p>I help you choose and connect the perfect <code>.com</code> or <code>.in</code> domain. SSL, DNS, email,
+              analytics — all configured for you. You get a key, not a manual.</p>
+            <ul class="tstep__list">
+              <li>Domain selection and purchase</li>
+              <li>DNS, SSL and email setup</li>
+              <li>Production deployment</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="tstep tstep--right" data-reveal>
+          <div class="tstep__content">
+            <span class="tstep__phase">Ongoing</span>
+            <h3>Launch <span class="amp">&amp;</span> Care</h3>
+            <p>A soft launch, a final QA pass, then handoff with documentation. Optional care plans keep your site fast,
+              secure and evolving with your business.</p>
+            <ul class="tstep__list">
+              <li>QA across devices</li>
+              <li>Documentation and training</li>
+              <li>Care and iteration plans</li>
+            </ul>
+          </div>
+          <div class="tstep__nub">06</div>
+          <div class="tstep__media">
+            <img loading="lazy" src="assets/phase-06-launch.svg"
+              alt="Launch & Care — rocket, live badge, ongoing care." />
+            <span class="tstep__tag">Launch</span>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- WORK / PROJECTS -->
+    <section class="work" id="work">
+      <div class="section__head">
+        <span class="section__index">/ 03</span>
+        <span class="section__label">Selected work</span>
+      </div>
+
+      <div class="work__intro">
+        <h2 class="h-display reveal-lines">
+          A selection of recent <em>premium</em> builds.
+        </h2>
+        <div class="work__filters" role="tablist" aria-label="Filter projects">
+          <button class="chip is-active" data-filter="all" role="tab" aria-selected="true">All</button>
+          <button class="chip" data-filter="luxury" role="tab" aria-selected="false">Luxury</button>
+          <button class="chip" data-filter="product" role="tab" aria-selected="false">Product</button>
+          <button class="chip" data-filter="travel" role="tab" aria-selected="false">Travel</button>
+        </div>
+      </div>
+
+      <div class="work__grid">
+        <!-- ORIVA -->
+        <a class="card" href="https://oriva-dental-production.up.railway.app/" target="_blank" rel="noopener"
+          data-cat="luxury" data-reveal>
+          <div class="card__media">
+            <img loading="lazy" src="assets/preview-oriva.svg"
+              alt="Oriva — The Art of Dentistry, premium landing page" />
+            <span class="card__badge">Live</span>
+          </div>
+          <div class="card__body">
+            <header class="card__head">
+              <h3>Oriva — The Art of Dentistry</h3>
+              <span class="card__year">'25</span>
+            </header>
+            <p>A frontend-only landing site for a fictional luxury dental atelier — quiet, precise, art-directed.
+              Designed to feel like a ₹15L+ hospitality brand rather than a clinic.</p>
+            <ul class="card__stack">
+              <li>HTML</li>
+              <li>CSS</li>
+              <li>JavaScript</li>
+              <li>GSAP</li>
+            </ul>
+            <span class="card__link">Open live site
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4">
+                <path d="M7 17L17 7M9 7h8v8" />
+              </svg>
+            </span>
+          </div>
+        </a>
+
+        <!-- DOMÉA -->
+        <a class="card" href="https://domea-interiors-production.up.railway.app/" target="_blank" rel="noopener"
+          data-cat="luxury" data-reveal>
+          <div class="card__media">
+            <img loading="lazy" src="assets/preview-domea.svg" alt="Doméa — Luxury Interior Design Studio" />
+            <span class="card__badge">Live</span>
+          </div>
+          <div class="card__body">
+            <header class="card__head">
+              <h3>Doméa — Interiors Studio</h3>
+              <span class="card__year">'25</span>
+            </header>
+            <p>"Designing spaces that speak luxury." A boutique interior atelier site — generous typography, slow
+              motion, editorial galleries.</p>
+            <ul class="card__stack">
+              <li>HTML</li>
+              <li>CSS</li>
+              <li>JavaScript</li>
+              <li>Motion</li>
+            </ul>
+            <span class="card__link">Open live site
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4">
+                <path d="M7 17L17 7M9 7h8v8" />
+              </svg>
+            </span>
+          </div>
+        </a>
+
+        <!-- PHYSIOCARE -->
+        <a class="card" href="https://physio-care-production.up.railway.app/" target="_blank" rel="noopener"
+          data-cat="product" data-reveal>
+          <div class="card__media">
+            <img loading="lazy" src="assets/preview-physio.svg" alt="PhysioCare Clinic — full-stack Flask product" />
+            <span class="card__badge">Live</span>
+          </div>
+          <div class="card__body">
+            <header class="card__head">
+              <h3>PhysioCare — Clinic Platform</h3>
+              <span class="card__year">'25</span>
+            </header>
+            <p>A full-stack Flask platform: patient booking, role-based dashboards, AI chatbot triage, admin reporting,
+              and a public marketing site — shipped end-to-end.</p>
+            <ul class="card__stack">
+              <li>Python</li>
+              <li>Flask</li>
+              <li>SQLAlchemy</li>
+              <li>Claude AI</li>
+            </ul>
+            <span class="card__link">Open live site
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4">
+                <path d="M7 17L17 7M9 7h8v8" />
+              </svg>
+            </span>
+          </div>
+        </a>
+
+        <!-- AL-SAFAR -->
+        <a class="card" href="https://al-safar-travels-production.up.railway.app/" target="_blank" rel="noopener"
+          data-cat="travel" data-reveal>
+          <div class="card__media">
+            <img loading="lazy" src="assets/preview-alsafar.svg" alt="Al-Safar Travels — luxury travel landing page" />
+            <span class="card__badge">Live</span>
+          </div>
+          <div class="card__body">
+            <header class="card__head">
+              <h3>Al-Safar Travels</h3>
+              <span class="card__year">'25</span>
+            </header>
+            <p>A luxury travel landing experience — cinematic hero, considered itineraries and a calm booking flow for
+              discerning travellers.</p>
+            <ul class="card__stack">
+              <li>HTML</li>
+              <li>CSS</li>
+              <li>JavaScript</li>
+              <li>GSAP</li>
+            </ul>
+            <span class="card__link">Open live site
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4">
+                <path d="M7 17L17 7M9 7h8v8" />
+              </svg>
+            </span>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <!-- IN MOTION — animated build & deploy section -->
+    <section class="motion" id="motion">
+      <div class="section__head">
+        <span class="section__index">/ 04</span>
+        <span class="section__label">In motion</span>
+      </div>
+
+      <div class="motion__head">
+        <h2 class="h-display reveal-lines">
+          From sketch to ship — <em>in motion</em>.
+        </h2>
+        <p class="lede reveal-lines">
+          Watch a project move through the studio in real time. A quiet terminal, a live build,
+          a deploy. Every site you've seen above was shipped this way — quietly, precisely,
+          on schedule.
+        </p>
+      </div>
+
+      <div class="motion__stage" data-reveal>
+        <!-- Browser mock with progressive build -->
+        <div class="window window--browser">
+          <div class="window__chrome">
+            <span class="dot dot--r"></span>
+            <span class="dot dot--y"></span>
+            <span class="dot dot--g"></span>
+            <div class="window__url"><span class="lock">●</span> https://akeef.studio</div>
+          </div>
+          <div class="window__viewport">
+            <div class="build">
+              <div class="build__nav">
+                <span class="build__logo"></span>
+                <span class="build__navlinks">
+                  <i></i><i></i><i></i><i></i>
+                </span>
+              </div>
+              <div class="build__hero">
+                <div class="build__title"></div>
+                <div class="build__title build__title--alt"></div>
+                <div class="build__sub"></div>
+                <div class="build__cta"></div>
+              </div>
+              <div class="build__grid">
+                <div class="build__card"><span></span><span></span></div>
+                <div class="build__card"><span></span><span></span></div>
+                <div class="build__card"><span></span><span></span></div>
+              </div>
+              <div class="build__scan" aria-hidden="true"></div>
+            </div>
+          </div>
+          <div class="window__phase" id="motionPhase">
+            <span>01</span> Wireframing structure
+          </div>
+        </div>
+
+        <!-- Terminal mock with typing -->
+        <div class="window window--terminal">
+          <div class="window__chrome">
+            <span class="dot dot--r"></span>
+            <span class="dot dot--y"></span>
+            <span class="dot dot--g"></span>
+            <div class="window__url window__url--mono">akeef@studio · ~/projects/client-site</div>
+          </div>
+          <div class="window__body terminal" id="terminalBody">
+            <span class="terminal__line t-prompt-line">
+              <span class="t-prompt">akeef@studio</span>:<span class="t-path">~/client-site</span>$ <span
+                class="t-cursor">▮</span>
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Phase indicator strip -->
+      <div class="motion__steps" role="presentation">
+        <div class="mstep" data-phase="0"><span>01</span> Design</div>
+        <div class="mstep" data-phase="1"><span>02</span> Build</div>
+        <div class="mstep" data-phase="2"><span>03</span> Test</div>
+        <div class="mstep" data-phase="3"><span>04</span> Deploy</div>
+      </div>
+    </section>
+
+    <!-- SERVICES / GET YOUR OWN WEBSITE -->
+    <section class="services" id="services">
+      <div class="section__head">
+        <span class="section__index">/ 05</span>
+        <span class="section__label">Services</span>
+      </div>
+
+      <div class="services__hero">
+        <h2 class="h-display reveal-lines">
+          Want your own <em>website</em>?
+        </h2>
+        <p class="lede reveal-lines">
+          We design, build and deploy a premium website for you — with your own custom domain
+          (<code>.com</code> / <code>.in</code>) and full support from first sketch to launch day.
+          One studio, one point of contact, one beautifully shipped product.
+        </p>
+
+        <div class="services__ctarow">
+          <a href="#contact" class="btn btn--solid btn--lg" data-magnetic>
+            <span>Build my website</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4">
+              <path d="M5 12h14M13 5l7 7-7 7" />
+            </svg>
+          </a>
+          <a href="mailto:akeef.farooqi@gmail.com" class="btn btn--outline btn--lg" data-magnetic>
+            <span>Email the studio</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="services__bento">
+
+        <!-- Feature card (2x2) — Portfolio Websites with imagery -->
+        <article class="svc svc--feature" data-reveal>
+          <div class="svc__media">
+            <img loading="lazy"
+              src="https://images.unsplash.com/photo-1559028012-481c04fa702d?w=1100&amp;q=70&amp;auto=format&amp;fit=crop"
+              alt="Portfolio website on a designer's desk." />
+            <span class="svc__tag">Most loved</span>
+          </div>
+          <div class="svc__body">
+            <div class="svc__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3">
+                <path d="M12 2l3 6 6 1-4.5 4 1 6-5.5-3-5.5 3 1-6L3 9l6-1 3-6z" />
+              </svg>
+            </div>
+            <h3>Portfolio Websites</h3>
+            <p>Personal and creator portfolios designed like editorial covers. The kind of site that closes the deal
+              before the call.</p>
+            <ul>
+              <li>Custom brand and type system</li>
+              <li>GSAP motion and interactions</li>
+              <li>Case studies and project pages</li>
+            </ul>
+            <span class="svc__from">From <em>₹35,000</em></span>
+          </div>
+        </article>
+
+        <!-- Standard card -->
+        <article class="svc" data-reveal>
+          <div class="svc__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3">
+              <rect x="3" y="4" width="18" height="14" rx="2" />
+              <path d="M3 9h18M8 18v3M16 18v3M5 21h14" />
+            </svg>
+          </div>
+          <h3>Business Sites</h3>
+          <p>Multi-page sites for boutiques, clinics and ateliers. Authority you can feel in three seconds.</p>
+          <ul>
+            <li>Home · About · Services · Contact</li>
+            <li>Lead capture and analytics</li>
+          </ul>
+          <span class="svc__from">From <em>₹25,000</em></span>
+        </article>
+
+        <!-- Standard card -->
+        <article class="svc" data-reveal>
+          <div class="svc__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3">
+              <path d="M4 4h16v6H4zM4 14h16v6H4zM8 7h.01M8 17h.01" />
+            </svg>
+          </div>
+          <h3>Startup Landing</h3>
+          <p>Conversion-grade single pages with narrative, proof, and a focused CTA — ready for launch day.</p>
+          <ul>
+            <li>Hero, features, pricing, FAQ</li>
+            <li>Waitlist / Stripe-ready</li>
+          </ul>
+          <span class="svc__from">From <em>₹20,000</em></span>
+        </article>
+
+        <!-- Standard card -->
+        <article class="svc" data-reveal>
+          <div class="svc__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3">
+              <circle cx="12" cy="12" r="9" />
+              <path d="M3 12h18M12 3a14 14 0 010 18M12 3a14 14 0 000 18" />
+            </svg>
+          </div>
+          <h3>Domain <span class="amp">&amp;</span> Deploy</h3>
+          <p>Choose, register and connect a perfect <code>.com</code> / <code>.in</code> — and ship to a fast, secure
+            host.</p>
+          <ul>
+            <li>DNS, SSL, email forwarding</li>
+            <li>Production hosting setup</li>
+          </ul>
+          <span class="svc__from">Included <em>with builds</em></span>
+        </article>
+
+        <!-- Standard card -->
+        <article class="svc" data-reveal>
+          <div class="svc__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3">
+              <path d="M3 12h3l3-9 6 18 3-9h3" />
+            </svg>
+          </div>
+          <h3>Care <span class="amp">&amp;</span> Evolution</h3>
+          <p>Annual care plans for live sites: updates, content edits, performance tuning, small features as you grow.
+          </p>
+          <ul>
+            <li>Uptime, backups, edits</li>
+            <li>Quarterly UX iterations</li>
+          </ul>
+          <span class="svc__from">From <em>₹4,000/yr</em></span>
+        </article>
+
+        <!-- Wide card (4x1) — AI Features & Automations -->
+        <article class="svc svc--wide" data-reveal>
+          <div>
+            <div class="svc__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3">
+                <path
+                  d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83" />
+                <circle cx="12" cy="12" r="3" />
+              </svg>
+            </div>
+            <h3 style="margin-top:14px">AI Features <span class="amp">&amp;</span> Automations</h3>
+            <p>Add an AI assistant, smart forms, content generation or back-office automations to any site or product.
+              We integrate Claude, OpenAI and custom workflows that quietly save hours every week.</p>
+            <ul style="grid-template-columns:1fr 1fr;display:grid;gap:6px 24px;margin-top:8px">
+              <li>Claude &amp; OpenAI integrations</li>
+              <li>Workflow and CRM automations</li>
+              <li>Data scraping and pipelines</li>
+              <li>Smart forms and chat triage</li>
+            </ul>
+            <span class="svc__from" style="margin-top:18px">From <em>₹15,000</em></span>
+          </div>
+          <div class="svc__visual" aria-hidden="true">
+            <svg viewBox="0 0 200 200" fill="none" stroke="currentColor" stroke-width="1.2">
+              <circle cx="100" cy="100" r="60" stroke-dasharray="2 4" />
+              <circle cx="100" cy="100" r="40" />
+              <circle cx="100" cy="100" r="20" />
+              <circle cx="100" cy="100" r="6" fill="currentColor" stroke="none" />
+              <path d="M40 100h-20M180 100h-20M100 40v-20M100 180v-20" />
+              <circle cx="100" cy="40" r="3" fill="currentColor" stroke="none" />
+              <circle cx="160" cy="100" r="3" fill="currentColor" stroke="none" />
+              <circle cx="100" cy="160" r="3" fill="currentColor" stroke="none" />
+              <circle cx="40" cy="100" r="3" fill="currentColor" stroke="none" />
+            </svg>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- LET'S BUILD — CTA interlude -->
+    <section class="connect" id="connect">
+      <div class="connect__bg" aria-hidden="true">
+        <div class="connect__orb connect__orb--a"></div>
+        <div class="connect__orb connect__orb--b"></div>
+      </div>
+
+      <div class="section__head section__head--center">
+        <span>—</span>
+        <span class="section__index">06</span>
+        <span class="section__label-plain">Let's build</span>
+      </div>
+
+      <div class="connect__inner">
+        <h2 class="connect__title reveal-lines">
+          Have an idea?
+          <em>Let's make it quietly beautiful.</em>
+        </h2>
+
+        <p class="connect__lede reveal-lines">
+          Whether it's a new website, a landing page or an AI-driven product — I take on a
+          small number of projects each quarter to keep the work considered.
+        </p>
+
+        <a href="mailto:akeef.farooqi@gmail.com" class="connect__pill" data-magnetic>
+          <span>akeef.farooqi@gmail.com</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M5 12h14M13 5l7 7-7 7" />
+          </svg>
+        </a>
+
+        <div class="connect__social">
+          <a href="https://www.linkedin.com/in/akeeffarooqi7/" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="https://github.com/Akeeffarooqi7/" target="_blank" rel="noopener">GitHub</a>
+          <a href="https://www.instagram.com/akeef_farooqi7/" target="_blank" rel="noopener">Instagram</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section class="skills" id="skills">
+      <div class="section__head">
+        <span class="section__index">/ 07</span>
+        <span class="section__label">Skills <span class="amp">&amp;</span> stack</span>
+      </div>
+
+      <div class="skills__head">
+        <h2 class="h-display reveal-lines">
+          Tools sharp enough to <em>disappear</em>.
+        </h2>
+      </div>
+
+      <div class="skills__grid">
+
+        <div class="skillgroup" data-reveal>
+          <h3 class="skillgroup__title">Frontend</h3>
+          <ul class="skillgroup__items">
+            <li><span class="skill__icon">&lt;/&gt;</span><span>HTML5</span></li>
+            <li><span class="skill__icon">{ }</span><span>CSS3 / Tailwind</span></li>
+            <li><span class="skill__icon">JS</span><span>JavaScript</span></li>
+            <li><span class="skill__icon">⚛︎</span><span>React (basics)</span></li>
+            <li><span class="skill__icon">▲</span><span>GSAP / Lenis</span></li>
+          </ul>
+        </div>
+
+        <div class="skillgroup" data-reveal>
+          <h3 class="skillgroup__title">Backend</h3>
+          <ul class="skillgroup__items">
+            <li><span class="skill__icon">py</span><span>Python</span></li>
+            <li><span class="skill__icon">⚗︎</span><span>Flask</span></li>
+            <li><span class="skill__icon">⛁</span><span>SQLAlchemy / SQLite</span></li>
+            <li><span class="skill__icon">⇄</span><span>REST APIs</span></li>
+            <li><span class="skill__icon">✦</span><span>Auth &amp; sessions</span></li>
+          </ul>
+        </div>
+
+        <div class="skillgroup" data-reveal>
+          <h3 class="skillgroup__title">AI <span class="amp">&amp;</span> Automation</h3>
+          <ul class="skillgroup__items">
+            <li><span class="skill__icon">✺</span><span>Claude API</span></li>
+            <li><span class="skill__icon">◎</span><span>OpenAI API</span></li>
+            <li><span class="skill__icon">↻</span><span>Workflow bots</span></li>
+            <li><span class="skill__icon">⌬</span><span>Web scraping</span></li>
+            <li><span class="skill__icon">∿</span><span>Prompt engineering</span></li>
+          </ul>
+        </div>
+
+        <div class="skillgroup" data-reveal>
+          <h3 class="skillgroup__title">Tools <span class="amp">&amp;</span> Ops</h3>
+          <ul class="skillgroup__items">
+            <li><span class="skill__icon">⎇</span><span>Git / GitHub</span></li>
+            <li><span class="skill__icon">▣</span><span>VS Code · PyCharm</span></li>
+            <li><span class="skill__icon">☁︎</span><span>Railway · Vercel</span></li>
+            <li><span class="skill__icon">◧</span><span>Figma</span></li>
+            <li><span class="skill__icon">★</span><span>Lighthouse / SEO</span></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="skills__dots" role="tablist" aria-label="Skill group navigation">
+        <button class="dot is-active" type="button" aria-label="Show Frontend skills"></button>
+        <button class="dot" type="button" aria-label="Show Backend skills"></button>
+        <button class="dot" type="button" aria-label="Show AI &amp; Automation skills"></button>
+        <button class="dot" type="button" aria-label="Show Tools &amp; Ops skills"></button>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="contact" id="contact">
+      <div class="section__head">
+        <span class="section__index">/ 08</span>
+        <span class="section__label">Contact</span>
+      </div>
+
+      <div class="contact__inner">
+        <div class="contact__copy">
+          <h2 class="h-display reveal-lines">
+            Let's build something <em>quietly remarkable</em>.
+          </h2>
+          <p class="lede reveal-lines">
+            Tell me about the brand, the problem, the dream. I reply to every serious inquiry
+            within 24 hours — usually with a few thoughtful questions of my own.
+          </p>
+
+          <ul class="contact__list">
+            <li>
+              <span class="contact__label">Email</span>
+              <a href="mailto:akeef.farooqi@gmail.com">akeef.farooqi@gmail.com</a>
+            </li>
+            <li>
+              <span class="contact__label">Studio</span>
+              <span>India · Working worldwide</span>
+            </li>
+            <li>
+              <span class="contact__label">Hours</span>
+              <span>Mon – Sat · 10:00 – 19:00 IST</span>
+            </li>
+          </ul>
+
+          <div class="contact__social">
+            <a href="https://www.linkedin.com/in/akeeffarooqi7/" target="_blank" rel="noopener" aria-label="LinkedIn">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M4.98 3.5a2.5 2.5 0 11.02 5 2.5 2.5 0 01-.02-5zM3 9h4v12H3zM10 9h3.8v1.7h.05c.53-1 1.83-2.07 3.77-2.07 4.04 0 4.78 2.66 4.78 6.12V21h-4v-5.4c0-1.29-.02-2.95-1.8-2.95-1.8 0-2.07 1.4-2.07 2.85V21h-4z" />
+              </svg>
+              <!-- <span>LinkedIn</span> -->
+            </a>
+            <a href="https://github.com/Akeeffarooqi7/" target="_blank" rel="noopener" aria-label="GitHub">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M12 .5a12 12 0 00-3.79 23.39c.6.11.82-.26.82-.58v-2c-3.34.73-4.04-1.61-4.04-1.61-.55-1.4-1.34-1.77-1.34-1.77-1.1-.75.08-.74.08-.74 1.21.09 1.85 1.25 1.85 1.25 1.08 1.85 2.84 1.32 3.53 1.01.11-.79.42-1.32.76-1.62-2.66-.3-5.47-1.34-5.47-5.97 0-1.32.47-2.4 1.24-3.25-.13-.3-.54-1.54.11-3.21 0 0 1.01-.32 3.31 1.24a11.5 11.5 0 016.02 0c2.3-1.56 3.31-1.24 3.31-1.24.65 1.67.24 2.91.12 3.21.77.85 1.24 1.93 1.24 3.25 0 4.64-2.81 5.66-5.49 5.96.43.37.81 1.1.81 2.22v3.29c0 .32.22.7.83.58A12 12 0 0012 .5z" />
+              </svg>
+              <!-- <span>GitHub</span> -->
+            </a>
+            <a href="https://www.instagram.com/akeef_farooqi7/" target="_blank" rel="noopener" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+                <rect x="3" y="3" width="18" height="18" rx="5" />
+                <circle cx="12" cy="12" r="4" />
+                <circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" />
+              </svg>
+              <!-- <span>Instagram</span> -->
+            </a>
+            <a href="mailto:akeef.farooqi@gmail.com" aria-label="Email">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+                <rect x="3" y="5" width="18" height="14" rx="2" />
+                <path d="M3 7l9 6 9-6" />
+              </svg>
+              <!-- <span>Email</span> -->
+            </a>
+          </div>
+        </div>
+
+        <form class="contact__form" id="contactForm" action="https://formsubmit.co/ajax/akeef.farooqi@gmail.com"
+          method="POST" novalidate>
+          <h3>Send an inquiry</h3>
+
+          <!-- FormSubmit configuration -->
+          <input type="hidden" name="_subject" value="New project inquiry · akeef.studio" />
+          <input type="hidden" name="_template" value="table" />
+          <input type="hidden" name="_captcha" value="false" />
+          <input type="text" name="_honey" class="honey" tabindex="-1" autocomplete="off" />
+
+          <div class="field">
+            <label for="cf-name">Your name</label>
+            <input id="cf-name" name="name" type="text" autocomplete="name" required />
+          </div>
+          <div class="field">
+            <label for="cf-email">Email</label>
+            <input id="cf-email" name="email" type="email" autocomplete="email" required />
+          </div>
+          <div class="field">
+            <label for="cf-budget">Budget</label>
+            <select id="cf-budget" name="budget">
+              <option value="">Select a range</option>
+              <option>Under ₹25k</option>
+              <option>₹25k – ₹75k</option>
+              <option>₹75k – ₹2L</option>
+              <option>₹2L+</option>
+              <option>Not sure yet</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="cf-type">Project type</label>
+            <select id="cf-type" name="type">
+              <option value="">What are we building?</option>
+              <option>Business website</option>
+              <option>Portfolio website</option>
+              <option>Startup landing page</option>
+              <option>Full product / app</option>
+              <option>AI feature / automation</option>
+              <option>Something else</option>
+            </select>
+          </div>
+          <div class="field field--full">
+            <label for="cf-message">Tell me about it</label>
+            <textarea id="cf-message" name="message" rows="5" required
+              placeholder="Brand, audience, timeline, links you love…"></textarea>
+          </div>
+          <div class="field field--full">
+            <button type="submit" class="btn btn--solid btn--lg" data-magnetic>
+              <span>Send inquiry</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4">
+                <path d="M5 12h14M13 5l7 7-7 7" />
+              </svg>
+            </button>
+            <p class="form__note" id="formNote" aria-live="polite">Your message is sent directly to my inbox — no apps,
+              no redirects.</p>
+          </div>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer__hero">
+      <h2 class="footer__big">
+        <span>Have a vision?</span>
+        <a href="#contact" class="footer__cta">Let's build it
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4">
+            <path d="M7 17L17 7M9 7h8v8" />
+          </svg>
+        </a>
+      </h2>
+    </div>
+
+    <div class="footer__grid">
+      <div class="footer__col">
+        <a href="#home" class="brand">
+          <span class="brand__mark">AKEEF<span class="brand__sep">·</span> STUDIO</span>
+          <!-- <span class="brand__deg">°</span></span> -->
+          <!-- <span class="brand__word">Akeef <span class="brand__sep">·</span> Studio</span> -->
+        </a>
+        <p>Studio of code, craft <span class="amp">&amp;</span> intelligence. Designing premium digital products for
+          considered brands.</p>
+      </div>
+
+      <div class="footer__col">
+        <h4>Studio</h4>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#process">Process</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#work">Work</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__col">
+        <h4>Connect</h4>
+        <ul>
+          <li><a href="https://www.linkedin.com/in/akeeffarooqi7/" target="_blank" rel="noopener">LinkedIn</a></li>
+          <li><a href="https://github.com/Akeeffarooqi7/" target="_blank" rel="noopener">GitHub</a></li>
+          <li><a href="https://www.instagram.com/akeef_farooqi7/" target="_blank" rel="noopener">Instagram</a></li>
+          <li><a href="mailto:akeef.farooqi@gmail.com">Email</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__col">
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="terms.html">Terms <span class="amp">&amp;</span> Conditions</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer__bar">
+      <span>© 2025 Akeef Farooqi. All rights reserved.</span>
+      <span class="footer__time" id="footerTime">—</span>
+    </div>
+    <div class="footer__built">
+      Built by <a href="https://www.linkedin.com/in/akeeffarooqi7/" target="_blank" rel="noopener"><span
+          class="footer__mark">AKEEF<span class="mark__sep">·</span>STUDIO</span></a>
+    </div>
+  </footer>
+
+</body>
+
+</html>

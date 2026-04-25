@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 900" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <radialGradient id="asBg" cx="50%" cy="55%" r="80%">
+      <stop offset="0%" stop-color="#1F1A14"/>
+      <stop offset="60%" stop-color="#0E0A06"/>
+      <stop offset="100%" stop-color="#040302"/>
+    </radialGradient>
+    <linearGradient id="asMoon" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#F4D078"/>
+      <stop offset="100%" stop-color="#A87E20"/>
+    </linearGradient>
+    <radialGradient id="asGlow" cx="50%" cy="40%" r="35%">
+      <stop offset="0%" stop-color="#D4A23A" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#D4A23A" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="asTitle" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#F4D89A"/>
+      <stop offset="100%" stop-color="#C29248"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Pure dark background with subtle radial -->
+  <rect width="1400" height="900" fill="url(#asBg)"/>
+  <rect width="1400" height="900" fill="url(#asGlow)"/>
+
+  <!-- Crescent moon (centered) -->
+  <g transform="translate(700 360)">
+    <!-- Glow halo -->
+    <circle cx="0" cy="0" r="120" fill="#D4A23A" opacity="0.08"/>
+    <circle cx="0" cy="0" r="80" fill="#D4A23A" opacity="0.10"/>
+    <!-- Moon (full disc) -->
+    <circle cx="0" cy="0" r="62" fill="url(#asMoon)"/>
+    <!-- Cut to make crescent -->
+    <circle cx="22" cy="-8" r="56" fill="#0E0A06"/>
+    <!-- Small star dot -->
+    <circle cx="48" cy="-44" r="3.5" fill="#F4E0A8"/>
+  </g>
+
+  <!-- AL-SAFAR title -->
+  <text x="700" y="620" text-anchor="middle" font-family="Fraunces, Georgia, serif" font-size="92" font-weight="380" letter-spacing="22" fill="url(#asTitle)">AL-SAFAR</text>
+
+  <!-- Divider line -->
+  <line x1="610" y1="668" x2="790" y2="668" stroke="#A87E20" stroke-width="1.2" opacity="0.6"/>
+
+  <!-- Italic tagline -->
+  <text x="700" y="720" text-anchor="middle" font-family="Fraunces, Georgia, serif" font-style="italic" font-size="22" font-weight="300" fill="#C8B895" opacity="0.85">Bismillah · begin the journey</text>
+
+  <!-- Faint distant stars -->
+  <g fill="#F4E0A8" opacity="0.45">
+    <circle cx="180" cy="120" r="1.4"/>
+    <circle cx="240" cy="280" r="1"/>
+    <circle cx="380" cy="160" r="1.6"/>
+    <circle cx="1040" cy="190" r="1.2"/>
+    <circle cx="1200" cy="310" r="1.5"/>
+    <circle cx="1280" cy="140" r="1"/>
+    <circle cx="940" cy="80" r="1.3"/>
+    <circle cx="120" cy="500" r="1.1"/>
+    <circle cx="1320" cy="540" r="1.4"/>
+    <circle cx="80" cy="780" r="1"/>
+    <circle cx="1330" cy="780" r="1.2"/>
+  </g>
+</svg>

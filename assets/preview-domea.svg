@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 900" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="dmBg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1F1A14"/>
+      <stop offset="60%" stop-color="#16120D"/>
+      <stop offset="100%" stop-color="#0E0B07"/>
+    </linearGradient>
+    <radialGradient id="dmGlow" cx="78%" cy="35%" r="55%">
+      <stop offset="0%" stop-color="#5C4A30" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="#5C4A30" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="dmWindow" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#3A3326" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#3A3326" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1400" height="900" fill="url(#dmBg)"/>
+  <rect width="1400" height="900" fill="url(#dmGlow)"/>
+
+  <!-- Window panes hint (right side) -->
+  <g opacity="0.20">
+    <rect x="1040" y="120" width="320" height="280" fill="url(#dmWindow)"/>
+    <line x1="1040" y1="260" x2="1360" y2="260" stroke="#7A6A4A" stroke-width="2"/>
+    <line x1="1200" y1="120" x2="1200" y2="400" stroke="#7A6A4A" stroke-width="2"/>
+  </g>
+  <!-- Brass arc lamp -->
+  <path d="M 1020 200 Q 870 280 950 540" stroke="#A87E20" stroke-width="3.5" fill="none" opacity="0.55"/>
+  <ellipse cx="1020" cy="200" rx="22" ry="14" fill="#D4A23A" opacity="0.7"/>
+  <ellipse cx="950" cy="540" rx="40" ry="10" fill="#A87E20" opacity="0.5"/>
+
+  <!-- Plant hint -->
+  <g opacity="0.35">
+    <path d="M 1370 540 Q 1340 460 1320 400 M 1370 540 Q 1390 470 1395 410 M 1370 540 Q 1355 480 1345 430" stroke="#7A8868" stroke-width="3" fill="none"/>
+  </g>
+
+  <!-- Top brand + nav -->
+  <text x="80" y="78" font-family="Fraunces, Georgia, serif" font-size="34" font-style="italic" font-weight="400" fill="#FFFFFF">Doméa</text>
+  <text x="80" y="106" font-family="Inter, sans-serif" font-size="10" letter-spacing="6" fill="#9A8870" font-weight="500">LUXURY · INTERIORS</text>
+
+  <g font-family="Inter, sans-serif" font-size="12" letter-spacing="3" fill="#FFFFFF" opacity="0.85">
+    <text x="430" y="80">HOME</text>
+    <text x="510" y="80">PROJECTS</text>
+    <text x="620" y="80">SERVICES</text>
+    <text x="730" y="80">PROCESS</text>
+    <text x="840" y="80">JOURNAL</text>
+    <text x="940" y="80">CONTACT</text>
+  </g>
+
+  <!-- Book consultation pill -->
+  <rect x="1080" y="50" width="240" height="48" rx="0" fill="none" stroke="#FFFFFF" stroke-width="1"/>
+  <text x="1200" y="80" text-anchor="middle" font-family="Inter, sans-serif" font-size="12" letter-spacing="2.5" fill="#FFFFFF" font-weight="500">BOOK CONSULTATION</text>
+
+  <!-- Hero typography -->
+  <text x="80" y="330" font-family="Fraunces, Georgia, serif" font-size="110" font-weight="380" letter-spacing="-2" fill="#FFFFFF">Designing Spaces</text>
+  <text x="80" y="455" font-family="Fraunces, Georgia, serif" font-size="110" font-style="italic" font-weight="350" letter-spacing="-2" fill="#D4A23A">That Speak</text>
+  <text x="80" y="580" font-family="Fraunces, Georgia, serif" font-size="110" font-weight="380" letter-spacing="-2" fill="#FFFFFF">Luxury.</text>
+
+  <!-- Body copy -->
+  <text x="80" y="680" font-family="Inter, sans-serif" font-size="18" fill="#B5AC9A">Bespoke interior design tailored for refined living</text>
+  <text x="80" y="708" font-family="Inter, sans-serif" font-size="18" fill="#B5AC9A">— where every detail is a quiet celebration of craft.</text>
+
+  <!-- CTAs -->
+  <rect x="80" y="775" width="220" height="60" fill="#F5EFE3"/>
+  <text x="190" y="813" text-anchor="middle" font-family="Inter, sans-serif" font-size="13" letter-spacing="2.5" fill="#1A1815" font-weight="600">VIEW PROJECTS  →</text>
+
+  <rect x="320" y="775" width="240" height="60" fill="none" stroke="#FFFFFF" stroke-width="1"/>
+  <text x="440" y="813" text-anchor="middle" font-family="Inter, sans-serif" font-size="13" letter-spacing="2.5" fill="#FFFFFF" font-weight="500">BOOK CONSULTATION</text>
+
+  <!-- SCROLL vertical -->
+  <g transform="translate(1370 870) rotate(-90)">
+    <text x="0" y="0" font-family="Inter, sans-serif" font-size="11" letter-spacing="6" fill="#FFFFFF" opacity="0.6" font-weight="500">SCROLL</text>
+  </g>
+</svg>
