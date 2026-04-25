@@ -1985,18 +1985,13 @@ section {
   color: var(--ink);
 }
 
-/* Browser viewport */
+/* Browser viewport — fills the remaining space inside the locked window */
 .window__viewport {
-  height: 380px;
+  flex: 1 1 auto;
+  min-height: 0;
   background: var(--bg);
   position: relative;
   overflow: hidden;
-}
-
-@media (max-width: 600px) {
-  .window__viewport {
-    height: 300px;
-  }
 }
 
 .build {
@@ -2222,15 +2217,15 @@ section {
   font-weight: 500;
 }
 
-/* Terminal — light mode */
+/* Terminal — fills the remaining space inside the locked window.
+   The .window--terminal height is hard-pinned above, so terminal
+   content (typing animation) scrolls inside this box rather than
+   pushing the page taller. */
 .terminal {
-  /* Lock the terminal to a fixed basis. flex items default to
-     min-height:auto which would let typed content grow the box and
-     push the page taller — flex:0 0 380px + min-height:0 prevents that. */
-  flex: 0 0 380px;
-  height: 380px;
+  flex: 1 1 auto;
   min-height: 0;
-  max-height: 380px;
+  height: auto;
+  max-height: none;
   padding: 20px 22px;
   font-family: var(--mono);
   font-size: 12.5px;
@@ -2252,9 +2247,6 @@ section {
 
 @media (max-width: 600px) {
   .terminal {
-    flex: 0 0 300px;
-    height: 300px;
-    max-height: 300px;
     font-size: 11.5px;
     padding: 16px 18px;
   }
