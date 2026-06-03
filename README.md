@@ -3,7 +3,7 @@
 > Studio of code, craft & intelligence.
 > A personal portfolio for **Akeef Farooqi** — developer, AI builder and web architect — designing premium digital products for founders, ateliers and ambitious brands.
 
-**Live site:** [akeef.studio](https://akeef.studio/)
+**Live site:** [akeef.studio](https://akeef-studio.vercel.app/)
 
 ---
 
