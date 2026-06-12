@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://akeef-studio.vercel.app/sitemap.xml
